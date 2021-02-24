@@ -1,21 +1,19 @@
 import React, { Component } from "react";
-import { ReactSVG } from 'react-svg'
-import Countdown from './coutdown';
+// import { ReactSVG } from 'react-svg'
 
 
-class Home extends Component {
+class Countdown extends Component {
 
   render() {
     return (
       <section className="home">
-      <p>home</p>
-      <Countdown/>
-      <div>
+      <p>countdown</p>
+      {/* <div>
         <ReactSVG src="assets/svg/bg-stars.svg" />
-      </div>
+      </div> */}
       </section>
     )
   }
 }
   
-export default Home;
+export default Countdown;
