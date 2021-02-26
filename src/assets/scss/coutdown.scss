@@ -1,0 +1,93 @@
+@import "./colors.scss";
+@import "./fonts.scss";
+
+.countdown-clock {
+    width: 700px;
+    margin: 0 auto; 
+    display: flex; 
+    flex-direction: row; 
+    margin: 0 auto; 
+    justify-content: space-between;
+
+    @media(max-width:767px) {
+        width: 85%;
+    }
+
+    .card {
+        width: 22%;
+
+        .counter-container {
+            position: relative;
+            background: linear-gradient($med-purple 50%, $bottom-card 50%);
+            border-radius: 8px;
+            box-shadow: 0px 10px 0px 0px #191a24;
+            transform: rotateX(0);
+            // transform-origin: bottom;
+            // transform-style: preserve-3d;
+            // backface-visibility: hidden;
+
+            &:before {
+                    content: "";
+                    position: absolute;
+                    top: calc(50% - 6px);
+                    left: -6px;
+                    width: 12px;
+                    height: 12px;
+                    background-color: #1e1f29;
+                    border-radius: 50%;
+
+                    @media(max-width:767px) {
+                        top: calc(50% - 1vw);
+                        width: 2vw;
+                        height: 2vw;
+                    }
+            }
+
+            &:after {
+                    content: "";
+                    position: absolute;
+                    top: calc(50% - 6px);
+                    right: -4%;
+                    width: 12px;
+                    height: 12px;
+                    background-color: #1e1f29;
+                    border-radius: 50%;
+
+                    @media(max-width:767px) {
+                        top: calc(50% - 1vw);
+                        width: 2vw;
+                        height: 2vw;
+                    }
+            }
+            
+            .number {
+                font-family: $font-red-hat;
+                color: $pink; 
+                font-size: 5rem;
+                font-weight: 700;
+                padding-top: 10%;
+                padding-bottom: 10%;
+                position: relative;
+                z-index: 5;
+
+                @media(max-width:767px) {
+                    font-size: 10vw;
+                }
+            }
+        }
+
+        .copy {
+            color: $purple-copy; 
+            font-family: $font-red-hat;
+            font-size: 1rem;
+            letter-spacing: .3rem;
+            font-weight: 700;
+            margin-top: -2.5rem;
+
+            @media(max-width:767px) {
+                font-size: 2.5vw;
+                margin-top: -20%;
+            }
+        }
+    }
+}

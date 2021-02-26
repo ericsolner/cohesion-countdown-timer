@@ -2,6 +2,7 @@
 import './App.scss';
 import { Route, Switch, BrowserRouter as Router } from 'react-router-dom';
 import Home from './components/home';
+import Footer from './components/footer';
 
 function App() {
   return (
@@ -10,6 +11,7 @@ function App() {
         <Switch>
           <Route exact path="/" component={Home} />
         </Switch>
+        <Footer/>
         </Router>
     </div>
   );

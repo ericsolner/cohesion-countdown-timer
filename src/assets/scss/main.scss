@@ -1,4 +1,89 @@
-p {
-    color: red;
-    font-family: 'Red Hat Text', sans-serif;
+@import "./coutdown.scss";
+@import "./colors.scss";
+@import "./fonts.scss";
+@import "./animations.scss";
+
+body {
+    background: $dark-purple;
+    background: url('../svg/bg-stars.svg'), $dark-purple;
+}
+
+.home {
+    width: 100%; 
+    transform:translateY(25%);
+
+    @media(max-width:767px) {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-75%);
+    }
+
+    h2 {
+        color: white; 
+        font-size: 1.75rem; 
+        font-family: $font-red-hat;
+        text-transform: uppercase;
+        letter-spacing: .3rem;
+        text-align: center;
+        width: 100%;
+        font-weight: 500;
+        margin-bottom: 0;
+
+        @media(max-width:767px) {
+            font-size: 4vw;
+            width: 60%;
+            margin: 0 auto;
+        }
+    }
+
+    .stars {
+        width: 100%;
+    }
+
+    .hills {
+        width: 100%; 
+    }
+}
+
+.footer {
+    background: url('../svg/pattern-hills.svg'), $dark-purple;
+    background-size: cover; 
+    height: 200px;
+    position: absolute;
+    // padding-top: 14%; 
+    background-size: cover; 
+    width: 100%;
+    bottom: 0;
+
+    @media(max-width:767px) {
+        height: 160px;
+        background-position: right;
+    }
+
+    .social {
+        display: flex; 
+        flex-direction: row; 
+        width: 140px; 
+        justify-content: space-between;
+        margin: 0 auto;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, 50%);
+
+        .icon {
+            width: 30px; 
+            height: 30px;
+
+           &:hover {
+            svg {
+                
+                path {
+                    fill: $pink;
+                    transition: .5s;
+                }
+            }
+           }
+        }
+    }
 }

@@ -9,9 +9,9 @@ class Countdown extends Component {
         super(props);
         this.state = {
             days: 0,
-            months: 0,
+            hours: 0,
             minutes: 0,
-            seconds: 0,
+            seconds: 0
         }
 
         this.setTime = this.setTime.bind(this);
@@ -45,28 +45,36 @@ class Countdown extends Component {
 
   render() {
     return (
-      <section className="couter">
+      <section className="countdown-clock">
             <div className="card">
                 <div className="counter-container">
-                    <p className="counter">{this.state.days}</p>
+                    <p className="number">{this.state.days}</p>
+                    <div className="divit-left"></div>
+                    <div className="divit-right"></div>
                 </div>
                 <p className="copy">DAYS</p>
             </div>
             <div className="card">
                 <div className="counter-container">
-                    <p className="counter">{this.state.hours}</p>
+                    <p className="number">{this.state.hours}</p>
+                    <div className="divit-left"></div>
+                    <div className="divit-right"></div>
                 </div>
                 <p className="copy">HOURS</p>
             </div>
             <div className="card">
                 <div className="counter-container">
-                    <p className="counter">{this.state.minutes}</p> 
+                    <p className="number">{this.state.minutes}</p>
+                    <div className="divit-left"></div>
+                    <div className="divit-right"></div> 
                 </div>
                 <p className="copy">MINUTES</p>
             </div>
             <div className="card">
-                <div className="counter-container">
-                    <p className="counter">{this.state.seconds}</p>
+                <div className="counter-container flip">
+                    <p className="number reverse-flip">{this.state.seconds}</p>
+                    <div className="divit-left"></div>
+                    <div className="divit-right"></div>
                 </div>
                 <p className="copy">SECONDS</p>
             </div>
